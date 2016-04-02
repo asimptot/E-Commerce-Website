@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UmitEticaret" Class="EticaretDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=UmitEticaret;Integrated Security=True" SettingsObjectName="DataLayer.Properties.Settings" SettingsPropertyName="UmitEticaretConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cinsiyet" Member="Cinsiyets">
+    <Type Name="Cinsiyet">
+      <Column Name="CinsiyetID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CinsiyetAdi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Cinsiyet_Uye" Member="Uyes" ThisKey="CinsiyetID" OtherKey="Cinsiyet" Type="Uye" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategori" Member="Kategoris">
+    <Type Name="Kategori">
+      <Column Name="KategoriID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KategoriAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AnaKategoriID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Aktiflik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Kategori_Urun" Member="Uruns" ThisKey="KategoriID" OtherKey="KategoriID" Type="Urun" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Marka" Member="Markas">
+    <Type Name="Marka">
+      <Column Name="MarkaID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MarkaAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Marka_Urun" Member="Uruns" ThisKey="MarkaID" OtherKey="MarkaID" Type="Urun" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Urun" Member="Uruns">
+    <Type Name="Urun">
+      <Column Name="UrunID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrunAdi" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="StokMiktari" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KategoriID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UrunAciklama" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="UrunResim" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Fiyat" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="VergiOran" Type="System.Decimal" DbType="Decimal(4,2)" CanBeNull="true" />
+      <Column Name="Aktiflik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Kategori_Urun" Member="Kategori" ThisKey="KategoriID" OtherKey="KategoriID" Type="Kategori" IsForeignKey="true" />
+      <Association Name="Marka_Urun" Member="Marka" ThisKey="MarkaID" OtherKey="MarkaID" Type="Marka" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Uye" Member="Uyes">
+    <Type Name="Uye">
+      <Column Name="UyeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UyeAdiSoyadi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Eposta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Aktiflik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Cinsiyet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SifreDurumu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UyeGuid" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GizliSoru" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Cevap" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="Cinsiyet_Uye" Member="Cinsiyet1" ThisKey="Cinsiyet" OtherKey="CinsiyetID" Type="Cinsiyet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Yonetici" Member="Yoneticis">
+    <Type Name="Yonetici">
+      <Column Name="YoneticiID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YoneticiAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YoneticiEposta" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="YoneticiTipiID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Aktiflik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="YoneticiTipi_Yonetici" Member="YoneticiTipi" ThisKey="YoneticiTipiID" OtherKey="YoneticiTipiID" Type="YoneticiTipi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YoneticiTipi" Member="YoneticiTipis">
+    <Type Name="YoneticiTipi">
+      <Column Name="YoneticiTipiID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YoneticiTipiAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="YoneticiTipi_Yonetici" Member="Yoneticis" ThisKey="YoneticiTipiID" OtherKey="YoneticiTipiID" Type="Yonetici" />
+    </Type>
+  </Table>
+  <Function Name="dbo.uyeekle" Method="uyeekle">
+    <Parameter Name="ad" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="epos" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="sif" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cins" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sifred" Type="System.Int32" DbType="Int" />
+    <Parameter Name="uguid" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="gsoru" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="cevap" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="sonuc" Type="System.String" DbType="VarChar(200)" Direction="InOut" />
+    <Parameter Name="id" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

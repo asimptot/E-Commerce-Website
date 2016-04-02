@@ -1,0 +1,20 @@
+C:\Users\Mcpd\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.dll
+C:\Users\Mcpd\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.pdb
+C:\Users\Mcpd\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\Mcpd\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.dll
+C:\Users\Mcpd\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.pdb
+C:\Users\As-\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.dll
+C:\Users\As-\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.pdb
+C:\Users\As-\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\As-\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.dll
+C:\Users\As-\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.pdb
+C:\Users\Samsung\Desktop\UmitEticaret\Helper\bin\Debug\Helper.dll
+C:\Users\Samsung\Desktop\UmitEticaret\Helper\bin\Debug\Helper.pdb
+C:\Users\Samsung\Desktop\UmitEticaret\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\Samsung\Desktop\UmitEticaret\Helper\obj\Debug\Helper.dll
+C:\Users\Samsung\Desktop\UmitEticaret\Helper\obj\Debug\Helper.pdb
+C:\Users\Samsung\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.dll
+C:\Users\Samsung\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\bin\Debug\Helper.pdb
+C:\Users\Samsung\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.csprojResolveAssemblyReference.cache
+C:\Users\Samsung\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.dll
+C:\Users\Samsung\Documents\Visual Studio 2012\Projects\UmitEticaret\Helper\obj\Debug\Helper.pdb
